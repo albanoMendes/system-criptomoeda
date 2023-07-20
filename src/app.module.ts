@@ -2,6 +2,13 @@ import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CountryModule } from './country/country.module';
+import { CurrencyModule } from './currency/currency.module';
+import { SaqueModule } from './saque/saque.module';
+import { YieldModule } from './yield/yield.module';
+import { InvestmentModule } from './investment/investment.module';
+import { RedeModule } from './rede/rede.module';
+import { AccountModule } from './account/account.module';
 
 @Module({
   imports: [
@@ -20,6 +27,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       migrationsRun: true,
     }),
     UserModule,
+    CountryModule,
+    CurrencyModule,
+    SaqueModule,
+    YieldModule,
+    InvestmentModule,
+    RedeModule,
+    AccountModule,
   ],
   controllers: [],
   providers: [],
